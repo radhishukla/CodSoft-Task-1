@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Innovations</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/b04efdb9c1.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div id="header">
+        <div class="container"></div>
+        <nav>
+            <img src="Logo.jpg" class="logo">
+            <ul id="sidemenu">
+                <li><a href="#header">HOME</a></li>
+                <li><a href="#about">ABOUT</a></li>
+                <li><a href="#services">SERVICES</a></li>
+                <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
+                <i class="fas fa-times" onclick="closemenu()"></i>
+            </ul>
+            <i class="fas fa-bars" onclick="openmenu()"></i>
+        </nav>
+        <div class="header-text">
+            <p>Landing Page</p>
+            <h1>Tech Innovations Pvt. Ltd.</h1>
+        </div>
+    </div>
+    <!-- ------about------ -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="Company.jpg" alt="User Image">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Us</h1>
+                    <br>
+                    <br>
+                    <p> Empowering tomorrow's world through today's innovations, we are a pioneering tech company driving change and progress. 
+                        <br> With a relentless focus on innovation, we specialize in developing cutting-edge solutions that shape the future. 
+                        <br> Join us in revolutionizing industries and transforming lives through the power of technology. </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ----------services---------- -->
+<div id="services">
+    <div class="container">
+        <h1 class="sub-title">Our Services</h1>
+        <div class="service-list">
+            <div class="service-item">
+                <i class="fa-solid fa-code"></i>
+                <h2>Technology</h2>
+                <p>Transforming ideas into realities through groundbreaking technological solutions tailored to your needs.</p>
+                <a href="#">Learn More</a>
+            </div>
+            <div class="service-item">
+                <i class="fa-solid fa-lightbulb"></i>
+                <h2>Innovation</h2>
+                <p>Igniting innovation at every turn, we provide comprehensive services to nurture creativity and drive transformative change.</p>
+                <a href="#">Learn More</a>
+            </div>
+        </div>
+    </div>
+</div>
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname, event) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+    <script>
+        var sidemenu = document.getElementById("sidemenu");
+        function openmenu(){
+            sidemenu.style.right = "0";
+        }
+        function closemenu(){
+            sidemenu.style.right = "-200px";
+        }
+    </script>
+</body>
+
+</html>
